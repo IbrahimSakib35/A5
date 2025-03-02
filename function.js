@@ -17,7 +17,7 @@ document.querySelectorAll('.complete-btn').forEach(button => {
             
             let taskName = this.closest('.task').querySelector('h3').textContent;
             let log = document.createElement('div');
-            log.innerHTML = `<span class="p-4 rounded-lg text-gray-600 bg-blue-50">You have Complete The Task ${taskName} at ${new Date().toLocaleTimeString()}</span>`;
+            log.innerHTML = `<p class="p-4 rounded-lg text-gray-600 bg-blue-50">You have Complete The Task ${taskName} at ${new Date().toLocaleTimeString()}</p>`;
             document.getElementById('activityLog').appendChild(log);
             
             this.disabled = true;
@@ -36,7 +36,7 @@ document.getElementById('discoverButton').addEventListener('click', function() {
     window.location.href = 'index2.html';
 });
 
-const colors = ['bg-gray-100', 'bg-gray-900', 'bg-blue-500', 'bg-green-500', 'bg-purple-500'];
+const colors = ['bg-gray-100', 'bg-yellow-400', 'bg-blue-300', 'bg-green-300', 'bg-purple-300'];
 let currentIndex = 0;
 document.getElementById('themeToggle').addEventListener('click', function () {
     document.body.classList.remove(colors[currentIndex]);

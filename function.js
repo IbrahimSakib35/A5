@@ -16,8 +16,8 @@ document.querySelectorAll('.complete-btn').forEach(button => {
             document.getElementById('completedCount').textContent = completedCount;
             
             let taskName = this.closest('.task').querySelector('h3').textContent;
-            let log = document.createElement('p');
-            log.innerHTML = `<span class="p-2 rounded-lg text-gray-600 bg-blue-50">You have Complete The Task ${taskName} at ${new Date().toLocaleTimeString()}</span>`;
+            let log = document.createElement('div');
+            log.innerHTML = `<span class="p-4 rounded-lg text-gray-600 bg-blue-50">You have Complete The Task ${taskName} at ${new Date().toLocaleTimeString()}</span>`;
             document.getElementById('activityLog').appendChild(log);
             
             this.disabled = true;

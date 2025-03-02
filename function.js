@@ -23,6 +23,11 @@ document.querySelectorAll('.complete-btn').forEach(button => {
             this.disabled = true;
             this.classList.add('bg-gray-400');
             this.classList.remove('btn-primary');
+
+            alert(`Board updated successfully!`);
+            if (taskCount === 0) {
+                alert("Congratz! You have completed all the current tasks");
+            }
         }
     });
 });
